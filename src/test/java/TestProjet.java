@@ -24,9 +24,9 @@ public class TestProjet {
     public void testProjet() throws Exception {
         driver.get("http://localhost:8090/dolibarr");
         driver.findElement(By.id("username")).clear();
-        driver.findElement(By.id("username")).sendKeys("clement");
+        driver.findElement(By.id("username")).sendKeys("admin");
         driver.findElement(By.id("password")).clear();
-        driver.findElement(By.id("password")).sendKeys("clement");
+        driver.findElement(By.id("password")).sendKeys("admin");
         driver.findElement(By.xpath("//*[@id=\"login_line2\"]/input")).click();
         try {
             assertEquals("Accueil", driver.findElement(By.xpath("//*[@id=\"id-right\"]/div/table/tbody/tr/td[2]/div")).getText());
