@@ -17,7 +17,6 @@ public class testInitial {
     public void setUp() throws Exception {
         String s = System.setProperty("webdriver.gecko.driver", "C:\\firefoxDriver\\geckodriver.exe");
         driver = new FirefoxDriver();
-        baseUrl = "https://www.google.com/";
         driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
     }
 
