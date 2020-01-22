@@ -15,8 +15,8 @@ public class TestProjet {
 
     @Before
     public void setUp() throws Exception {
-        driver = new FirefoxDriver();
-        baseUrl = "https://www.google.com/";
+        String s = System.setProperty("webdriver.chrome.driver", "C:\\firefoxDriver\\chromedriver.exe");
+        driver = new ChromeDriver();
         driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
     }
 
