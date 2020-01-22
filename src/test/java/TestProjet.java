@@ -22,7 +22,7 @@ public class TestProjet {
 
     @Test
     public void testProjet() throws Exception {
-        driver.get("http://10.131.1.32/dolibarr-10.0.6/dolibarr-10.0.6/htdocs/");
+        driver.get("http://localhost:8090/dolibarr");
         driver.findElement(By.id("username")).clear();
         driver.findElement(By.id("username")).sendKeys("clement");
         driver.findElement(By.id("password")).clear();
