@@ -23,19 +23,18 @@ public class TestProjet {
 
     @Test
     public void testProjet() throws Exception {
-        public void testProjet() throws Exception {
-            driver.get("http://localhost:8090/dolibarr");
-            driver.findElement(By.id("username")).clear();
-            driver.findElement(By.id("username")).sendKeys("admin");
-            driver.findElement(By.id("password")).clear();
-            driver.findElement(By.id("password")).sendKeys("admin");
-            driver.findElement(By.xpath("//*[@id=\"login_line2\"]/input")).click();
-            try {
-                assertEquals("Accueil", driver.findElement(By.xpath("//*[@id=\"id-right\"]/div/table/tbody/tr/td[2]/div")).getText());
-            } catch (Error e) {
-                verificationErrors.append(e.toString());
-            }
+        driver.get("http://localhost:8090/dolibarr");
+        driver.findElement(By.id("username")).clear();
+        driver.findElement(By.id("username")).sendKeys("admin");
+        driver.findElement(By.id("password")).clear();
+        driver.findElement(By.id("password")).sendKeys("admin");
+        driver.findElement(By.xpath("//*[@id=\"login_line2\"]/input")).click();
+        try {
+            assertEquals("Accueil", driver.findElement(By.xpath("//*[@id=\"id-right\"]/div/table/tbody/tr/td[2]/div")).getText());
+        } catch (Error e) {
+            verificationErrors.append(e.toString());
         }
+    }
 
     @After
     public void tearDown() throws Exception {
